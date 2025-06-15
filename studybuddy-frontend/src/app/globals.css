@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body.lock-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+body {
+  @apply bg-gray-900 text-white antialiased;
+  font-family: var(--font-geist-sans, Arial, Helvetica, sans-serif);
+}
+
+html, body {
+  height: 100%;
+}

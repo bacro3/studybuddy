@@ -1,0 +1,22 @@
+# Node.js
+node_modules/
+.next/
+.env
+.env.local
+dist/
+*.log
+
+# Python
+backend\venv
+backend\__pycache__
+*.pyc
+*.pyo
+*.pyd
+db.sqlite3
+
+# OS
+.DS_Store
+Thumbs.db
+
+# VSCode
+.vscode/

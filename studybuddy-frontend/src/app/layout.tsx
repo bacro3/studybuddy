@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
 import "./globals.css"
 import SupabaseProvider from "@/components/SupabaseProvider"
-import Navbar from "@/components/Navbar"
+import ClientLayout from "@/components/ClientLayout"
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] })
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] })
@@ -26,11 +26,7 @@ export default function RootLayout({
         `}
       >
         <SupabaseProvider>
-          {/* ─── Navbar handles logo on home vs sub‐pages ─── */}
-          <Navbar />
-
-          {/* ─── Page content ─── */}
-          <main>{children}</main>
+          <ClientLayout>{children}</ClientLayout>
         </SupabaseProvider>
       </body>
     </html>

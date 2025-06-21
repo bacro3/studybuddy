@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
 body.lock-scroll {
   overflow: hidden;
   height: 100vh;
@@ -9,7 +9,7 @@ body.lock-scroll {
 
 body {
   @apply bg-gray-900 text-white antialiased;
-  font-family: var(--font-geist-sans, Arial, Helvetica, sans-serif);
+  font-family: var(--font-geist-sans, Helvetica, 'Nunito', 'Inter', 'Quicksand', Arial, sans-serif);
 }
 
 html, body {

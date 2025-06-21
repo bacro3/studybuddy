@@ -50,8 +50,12 @@ class AIStudyRequest(BaseModel):
 study_sessions = {}
 
 # --- HARDCODED SUPABASE CREDENTIALS FOR TESTING ---
-SUPABASE_URL = "https://vgmxuhmfyaefcwhlnfmx.supabase.co"
-SUPABASE_SERVICE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZnbXh1aG1meWFlZmN3aGxuZm14Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc0OTUyMjI5NywiZXhwIjoyMDY1MDk4Mjk3fQ.XA4cqSoLiopOP7HAFYaQf1oFxqJqcSJzzAQ6Un3kZ0I"
+SUPABASE_URL = os.getenv("SUPABASE_URL")
+SUPABASE_SERVICE_KEY = os.getenv("SUPABASE_SERVICE_KEY")
+if not SUPABASE_URL:
+    raise RuntimeError("SUPABASE_URL is not set in environment variables.")
+if not SUPABASE_SERVICE_KEY:
+    raise RuntimeError("SUPABASE_SERVICE_KEY is not set in environment variables.")
 # ---------------------------------------------------
 
 @app.get("/health")
